@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{include file="head.html"}
+
+<body>
+<div class="tabs-border">
+	<a class="item" href="{$appadmin}?m=module">插件列表</a>
+	<a  class="item active">插件开发</a>
+</div>
+<div class="main-body">
+<form method="post" action="{$appadmin}?m=module&a=create">
+<table class="table-add">
+	<tr>
+    	<td width="12%">插件名称</td>
+        <td width="88%"><input type="text" name="mod_name" id="mod_name"></td>
+    </tr>
+	<tr>
+	  <td>目录</td>
+	  <td><input type="text" name="mod_dir" id="mod_dir"></td>
+    </tr>
+	<tr>
+	  <td>表</td>
+	  <td><input type="text" name="mod_table" id="mod_table"></td>
+    </tr>
+	<tr>
+	  <td>简介</td>
+	  <td><textarea name="mod_info" id="mod_info" cols="45" rows="5"></textarea></td>
+    </tr>
+ 
+	<tr>
+	  <td>&nbsp;</td>
+	  <td><input type="button" class="js-submit" name="button"  class="btn" value="创建插件"></td>
+    </tr>
+</table>
+</form>
+</div>
+{include file="footer.html"}
+</body>
+</html>

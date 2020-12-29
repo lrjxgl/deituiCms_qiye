@@ -1,0 +1,57 @@
+<?php
+class indexControl extends skymvc
+{
+	function __construct()
+	{
+		parent::__construct();
+	}
+	
+	public function onTest(){
+		echo M("user_invitecode")->getCode(1);
+		 
+	} 
+
+	public function onDefault()
+	{
+		if(defined("RURL301") && RURL301!=""){
+			header("HTTP/1.1 301 Moved Permanently");			
+			header("Location: ".RURL301);			
+			exit();
+		}
+		$fromapp=get("fromapp");
+		switch($fromapp){
+			case "uniapp":
+				$flashList=M("ad")->listByNo("uniapp-index");
+				$navList=M("navbar")->navlist(14);
+				break;
+			default:
+				if(ISWAP){
+					$flashList=M("ad")->listByNo("wap-index");
+					$navList=M("navbar")->navlist(4);
+				}else{
+					$flashList=M("ad")->listByNo("pc-index");
+					if(empty($flashList)){
+						$flashList=M("ad")->listByNo("wap-index");
+					}
+					$navList=M("navbar")->navlist(4);
+				}
+				
+				break;
+		}
+		
+		$articleList=M("article")->Dselect(array(
+			"where"=>" is_recommend=1 AND status=2 ",
+			"limit"=>6,
+			"order"=>" id DESC"
+		));
+		$this->smarty->goAssign(array(
+			"flashList"=>$flashList,
+			"articleList"=>$articleList,
+			"navList"=>$navList
+		));
+		$tpl=M("pagetpl")->get("index","index","index.html");
+		$this->smarty->display($tpl);
+	}
+}
+
+?>

@@ -1,0 +1,32 @@
+.main-body{
+	width:1120px;
+	margin: 0 auto;
+}
+.row-box-hd{
+	font-weight: bold;
+}
+.page-side{
+	width:320px;
+	margin-right: 10px;
+}
+.bglist-item{
+	line-height: 30px;
+	padding: 3px 6px;
+	display: block;
+}
+.bglist-item.active{
+	background-color: #4892e3;
+	color: #fff;
+}
+.col-2{
+	width: 50%;
+}
+.col-3{
+	width:33.333%;
+}
+.col-4{
+	width: 25%;
+}
+.col-5{
+	width: 20%;
+}

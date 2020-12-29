@@ -1,0 +1,34 @@
+<div class="page-side">
+
+	<div class="row-box mgb-10">
+		<div class="row-box-hd">{if $parent}{$parent.cname}{else}产品中心{/if}</div>
+
+		<div class="list">
+			{foreach item=c from=$catlist}
+			<a href="/index.php?m=article&a=list&catid={$c.catid}" class="bglist-item {if $c.catid eq get('catid')}active{/if}">{$c.cname}</a>
+			{foreach item=cc from=$c.child}
+			<a href="/index.php?m=article&a=list&catid={$cc.catid}" class="bglist-item {if $cc.catid eq get('catid')}active{/if}">|--{$cc.cname}</a>
+			{/foreach}
+			{/foreach}
+		</div>
+		
+		
+
+	</div>
+	{get data=list model=article fun=recList("$cat.catid",12)}
+	{if $list}
+	<div class="row-box">
+		<div class="row-box-hd">热门产品</div>
+		<div class="list">
+			{foreach item=c from=$list}
+			<a href="/index.php?m=article&a=show&id={$c.id}" class="row-item {if $c.id eq get('id')}active{/if}">
+				<div class="row-item-title">{$c.title}</div>
+				<div class="cl-money">{$c.price}</div>
+			</a>
+			
+			{/foreach}
+		</div>
+		
+	</div>
+	{/if}
+</div>

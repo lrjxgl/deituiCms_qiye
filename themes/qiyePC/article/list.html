@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	{include file="head.html"}
+	<body>
+		{include file="header.html"}
+		<div class="main-body">
+			<div class="flex">
+				 
+				{include file="article/side.html"}
+				<div class="flex-1">
+					<div class="flex mgb-10 flex-ai-center">
+						<div>当前位置：</div>
+						<div>首页</div>
+						<div>&gt;</div>
+						<div>{$cat.cname}</div>
+						 
+						 
+					</div>
+					{foreach item=c from=$list}
+					<a href="/index.php?m=article&a=show&id={$c.id}" class="flexlist-item pointer">
+						{if $c.imgurl}<img src="{$c.imgurl}.100x100.jpg" class="flexlist-img" />{/if}
+						<div class="flex-1">
+							<div class="flexlist-title">{$c.title}</div>
+							<div class="flexlist-desc">{$c.description}</div>
+						</div>
+					</a>
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		{include file="footer.html"}
+	</body>
+</html>

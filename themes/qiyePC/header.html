@@ -1,0 +1,55 @@
+ <div class="header">
+	<div class="header-box">
+		 
+		<img src="{$site.logo|images_site}" class="header-logo"  alt="deituiCMS">
+		{get data=navList model=navbar fun=navlist(3)} 
+		 
+		<div class="header-navbar">
+			<a href="/" class="header-navbar-item {if $headerNav eq 'index'}header-navbar-active{/if}">首页</a>
+			{foreach item=c from=$navList} 
+			<div class="header-navbar-item {if $headerNav eq 'down'}header-navbar-active{/if}">
+				<a class="cl-white" href="{$c.link_url}">{$c.title}</a>
+				{if $c.child}
+				<div class="header-navbar-childBox">
+					{foreach item=cc from=$c.child}
+					<a href="{$cc.link_url}" class="header-navbar-childBox-item">{$cc.title}</a>
+					{/foreach}
+					 
+				</div>
+				{/if}
+			</div>
+			{/foreach}
+			
+		</div>
+		 
+	</div>
+	<div class="header-navbar-action"></div>
+</div>
+<div class="header-row"></div>
+ 
+<script>
+	$(function(){
+		if($(".header-navbar-active").length>0){
+			var left=$(".header-navbar-active").offset().left+$(".header-navbar-active").width()/2;
+		}else{
+			var left=$(".header-navbar-item:eq(0)").offset().left+$(".header-navbar-item:eq(0)").width()/2;
+		}
+		
+		$(".header-navbar-action").css({left:left});
+		$(document).on("mouseenter",".header-navbar-item",function(){
+			var w=$(this).width();
+			$(this).addClass("header-navbar-active").siblings().removeClass("header-navbar-active");
+			var left=$(".header-navbar-active").offset().left+w/2;
+			$(".header-navbar-action").animate({left:left},"fast");
+			$(this).find(".header-navbar-childBox").addClass("active")
+		})
+		$(document).on("mouseleave",".header-navbar-item",function(){
+			$(this).find(".header-navbar-childBox").removeClass("active")
+		})
+		$(document).on("click","[gourl]",function(){
+			window.location=$(this).attr("gourl");
+		})
+	})
+	
+	
+</script>

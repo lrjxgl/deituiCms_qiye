@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	{include file="head.html"}
+	<body>
+		<div class="header">
+			<div class="header-back"></div>
+			<div class="header-title">产品中心</div>
+		</div>
+		<div class="header-row"></div>
+		<div class="main-body">
+			{if $children}
+			<div class="tabs-border">
+					
+					{foreach item=c from=$children}	
+					<a href="/index.php?m=article&a=list&catid={$c.catid}" class="tabs-border-item">{$c.cname}</a>
+					{/foreach}
+				</div>
+			{/if}	
+			<div class="pd-10 bg-fff">
+				{foreach item=c from=$list}
+				<a href="/index.php?m=article&a=show&id={$c.id}" class="flexlist-item pointer">
+					<img class="flexlist-img" src="{$c.imgurl}.100x100.jpg" />
+					<div class="flex-1">
+						
+						<div class="flexlist-title">{$c.title}</div>
+						<div class="cl-money">￥{$c.price}</div>
+						<div class="flexlist-desc">{$c.description}</div>
+					</div>
+					
+				</a>
+				{/foreach}
+			</div>
+		</div>
+		{include file="footer.html"}
+		
+	</body>
+</html>
