@@ -1,1 +1,1 @@
-{"expire":1609240409,"data":[{"catid":10,"cname":"\u516c\u53f8\u52a8\u6001","logo":"","last_post":null,"child":[]},{"catid":11,"cname":"\u884c\u4e1a\u65b0\u95fb","logo":"","last_post":null,"child":[]}]}
+{"expire":1609241021,"data":[{"catid":10,"cname":"\u516c\u53f8\u52a8\u6001","logo":"","last_post":null,"child":[]},{"catid":11,"cname":"\u884c\u4e1a\u65b0\u95fb","logo":"","last_post":null,"child":[]}]}
