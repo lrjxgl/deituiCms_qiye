@@ -11,7 +11,7 @@
 		}
 		
 		public function onDefault(){
-			$where=" status=2 ";
+			$where=" status=1 ";
 			$url="/index.php?m=article&a=default";
 			$limit=24;
 			$start=get("per_page","i");
@@ -54,10 +54,11 @@
 					"url"=>$url
 				)
 			);
+			 
 			$this->smarty->display("article/index.html");
 		}
 		public function onList(){
-			$where=" status=2  ";
+			$where=" status=1  ";
 			$type=get_post('type','h');
 			$parent=$cat_2nd=$cat_3nd=array();
 			$catid=get('catid','i');

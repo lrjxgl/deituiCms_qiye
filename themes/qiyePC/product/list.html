@@ -10,18 +10,18 @@
 				<div class="flex-1">
 					<div class="flex mgb-10 flex-ai-center">
 						<div>当前位置：</div>
-						<div>首页</div>
+						<a href="/">首页</a>
 						
 						<div>&gt;</div>
 						<div> {$cat.cname}</div>
 					</div>
-					<div class="row-box">
+					<div class="pd-10">
 						<div class="flex flex-wrap">
 							{foreach item=c from=$list}
-							<a href="/index.php?m=article&a=show&id={$c.id}" class="block col-3 bg-white">
-								<div class="pd-5">
+							<a href="/index.php?m=article&a=show&id={$c.id}" class="block mgb-5 col-4">
+								<div class="pd-5 bg-white">
 									<img class="wmax" src="{$c.imgurl}.middle.jpg" />
-									<div class="mgb-5">{$c.title}</div>
+									<div class="mgb-5 cl1">{$c.title}</div>
 									<div class="cl-money">￥{$c.price}</div>
 								</div>
 								
