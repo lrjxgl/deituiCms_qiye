@@ -59,7 +59,7 @@
 		<div gourl="/index.php?m=article&a=list&catid={$sets.articleCatid}" class="row-box-more">更多</div>
 	</div>
 	<div >
-	{get data=list model=article fun=recList("$sets.productCatid",5)}
+	{get data=list model=article fun=recList("$sets.articleCatid",5)}
 	{foreach item=c from=$list}
 	<a href="/index.php?m=article&a=show&id={$c.id}" class="sglist-item">
 		{if $c.imgurl}
@@ -76,9 +76,10 @@
 	 
 </div>
 <div class="flex-center pd-10">
-	<a class="f12 cl3" href="http://www.beian.miit.gov.cn">{$site.icp}</a>
-</div>  
-{include file="footer-nav.html"}
+	<a class="f12 cl3" href="http://beian.miit.gov.cn">{$site.icp}</a>
+</div>
+{assign var="ftnav" value="index"}  
+{include file="ftnav.html"}
 {include file="footer.html"}
 <script src="/plugin/swiper/js/swiper.min.js"></script>
 <script>

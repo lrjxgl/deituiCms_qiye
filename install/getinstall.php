@@ -2,7 +2,7 @@
 require("cls_pdo.php");
 $db=new mysql();
 $dbconfig["master"]=array(
-	"host"=>"localhost","user"=>"root","pwd"=>"root","database"=>"deituicmsbase"
+	"host"=>"localhost","user"=>"root","pwd"=>"root","database"=>"deituicms_qiye"
 );
 $db->set($dbconfig);
 $db->connect();

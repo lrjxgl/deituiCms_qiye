@@ -4,7 +4,7 @@
 			define("TABLE_PRE", "sky_");
 			$dbclass="mysqli";
 			$dbconfig["master"]=array(
-				"host"=>"localhost","user"=>"root","pwd"=>"root","database"=>"deituicmsbase","charset"=>"utf8mb4"
+				"host"=>"localhost","user"=>"root","pwd"=>"root","database"=>"deituicms_qiye"
 			);
 			/**其他分表库**/
 			/*

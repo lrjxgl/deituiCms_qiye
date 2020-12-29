@@ -134,7 +134,15 @@
 			}
 			$start=get_post('per_page','i');
 			$limit=20;
-			 
+			//价格区间
+			$choicePrice=get("choicePrice","h");
+			if(!empty($choicePrice)){
+				$arr=explode("-",$choicePrice);
+				$min=floatval($arr[0]);
+				$max=floatval($arr[1]);
+				$where.=" AND (price>".$min." AND price<".$max." ) ";
+				$url.="&choicePrice=".$choicePrice;
+			} 
 			$option=array(
 				"where"=>$where,
 				"start"=>$start,

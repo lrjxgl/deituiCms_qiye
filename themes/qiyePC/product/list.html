@@ -15,18 +15,22 @@
 						<div>&gt;</div>
 						<div> {$cat.cname}</div>
 					</div>
-					<div class="flex flex-wrap">
-						{foreach item=c from=$list}
-						<a href="/index.php?m=article&a=show&id={$c.id}" class="block col-3 bg-white">
-							<div class="pd-5">
-								<img class="wmax" src="{$c.imgurl}.middle.jpg" />
-								<div class="mgb-5">{$c.title}</div>
-								<div class="cl-money">￥{$c.price}</div>
-							</div>
-							
-						</a>
-						{/foreach}
+					<div class="row-box">
+						<div class="flex flex-wrap">
+							{foreach item=c from=$list}
+							<a href="/index.php?m=article&a=show&id={$c.id}" class="block col-3 bg-white">
+								<div class="pd-5">
+									<img class="wmax" src="{$c.imgurl}.middle.jpg" />
+									<div class="mgb-5">{$c.title}</div>
+									<div class="cl-money">￥{$c.price}</div>
+								</div>
+								
+							</a>
+							{/foreach}
+						</div>
+						{$pagelist}
 					</div>
+					
 				</div>
 			</div>
 		</div>

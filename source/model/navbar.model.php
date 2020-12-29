@@ -40,7 +40,8 @@ class navbarModel extends model{
 			1=>"后台顶部", 
 			2=>"后台左边",
 			3=>"PC主导航",
-			 
+			4=>"wap导航",
+			14=>"uniApp导航"
 			
 		 
 			

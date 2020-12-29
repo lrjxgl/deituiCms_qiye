@@ -5,10 +5,13 @@
 	<body>
 		<div class="header">
 			<div class="header-back"></div>
-			<div class="header-title">{$data.title}</div>
+			<div class="header-title">产品详情</div>
 		</div>
 		<div class="header-row"></div>
 		<div class="main-body mgb-10">
+			{if !$imgsata}
+			<img src="{$data.imgurl}" class="d-img" />
+			{else}
 			<div class="swiper-container" style="width: 100%;" id="indexFlash">
 				<div class="swiper-wrapper" >
 					{foreach item=c from=$imgsdata}
@@ -21,10 +24,12 @@
 				<div class="swiper-pagination flex flex-jc-center"></div>
 			 
 			</div>
-			<div class="row-box">
+			{/if}
+			<div class="row-box mgb-5">
 				<div class="d-title">{$data.title}</div>
-				<div class="d-tool bg-white">
-					{$data.author}  {$data.createtime|cutstr:11}
+				<div class="flex">
+					<div class="cl2 mgr-5">价格</div>
+					<div class="cl-money">{$data.price}</div>
 				</div>
 			</div>
 			

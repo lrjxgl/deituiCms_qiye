@@ -1,12 +1,12 @@
 .main-body{
-	width:1120px;
+	width:90%;
 	margin: 0 auto;
 }
 .row-box-hd{
 	font-weight: bold;
 }
 .page-side{
-	width:320px;
+	width:260px;
 	margin-right: 10px;
 }
 .bglist-item{

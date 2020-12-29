@@ -24,10 +24,10 @@
 		<div class="main-body">
 			 
 			<?php $this->assign("gs",M("article")->get("".$this->_var["sets"]["aboutID"]."")); ?>
-			<div class="row-box mgb-20">
+			<div style="padding: 20px 10px; background-color: #fff; margin-bottom: 20px; ">
 				<div class="flex">
 					<img style="width: 240px;" src="<?php echo $this->_var['gs']['imgurl']; ?>.small.jpg" />
-					<div class="flex-1  mgl-10">
+					<div class="flex-1  mgl-20">
 						<div class="f18 mgb-10 fw-600">公司简介</div>
 						<div class="cl2 mgb-10" style="line-height: 1.5;"><?php echo $this->_var['gs']['description']; ?></div>
 						<div class="flex">

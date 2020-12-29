@@ -14,14 +14,14 @@ define("APPMODULE","/module.php");
 define("AUTO_CHECK_BAD_WORD",false);
 define("OB_GZIP",false);
 define("SKINS","qiyePC");
-define("WAPSKINS","qiyeWap");
+define("WAPSKINS","qiyeWap"); 
  
 define("DOMAIN",$_SERVER["HTTP_HOST"]);
 define("SITEID",1);
 //短信测试
 define("SMS_TEST",false);
 //开启重写
-define("TESTMODEL",1);//开发测试模式
+define("TESTMODEL",0);//开发测试模式
 define("SQL_SLOW_LOG",0);//记录慢查询
 //UPLOAD_OSS--- aliyun/qiniu/upyun/0 不分离上传设为0
 define("UPLOAD_OSS",0);

@@ -27,6 +27,7 @@
 						</div>
 					</a>
 					<?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
+					<?php echo $this->_var['pagelist']; ?>
 				</div>
 			</div>
 		</div>

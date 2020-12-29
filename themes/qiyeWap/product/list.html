@@ -4,7 +4,7 @@
 	<body>
 		<div class="header">
 			<div class="header-back"></div>
-			<div class="header-title">产品中心</div>
+			<div class="header-title">{$cat.cname}</div>
 		</div>
 		<div class="header-row"></div>
 		<div class="main-body">
@@ -30,7 +30,10 @@
 				</a>
 				{/foreach}
 			</div>
+			{$pagelist}
 		</div>
+		{assign var="ftnav" value="product"}  
+		{include file="ftnav.html"}
 		{include file="footer.html"}
 		
 	</body>

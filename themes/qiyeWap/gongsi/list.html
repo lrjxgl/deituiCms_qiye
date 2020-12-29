@@ -8,13 +8,14 @@
 		</div>
 		<div class="header-row"></div>
 		<div class="main-body">
+			{if $children}
 			<div class="tabs-border">
-					<a class="tabs-border-item active js-cat" v="0">全部</a>
-					 
-					{foreach item=c from=$catlist}	
-					<a class="tabs-border-item js-cat" v="{$c.catid}">{$c.cname}</a>
+					
+					{foreach item=c from=$children}	
+					<a href="/index.php?m=article&a=list&catid={$c.catid}" class="tabs-border-item">{$c.cname}</a>
 					{/foreach}
 				</div>
+			{/if}
 			<div class="pd-10 bg-fff">
 				{foreach item=c from=$list}
 				<a href="/index.php?m=article&a=show&id={$c.id}" class="sglist-item">
@@ -33,7 +34,10 @@
 				</a>
 				{/foreach}
 			</div>
+			{$pagelist}
 		</div>
+		{assign var="ftnav" value="aboutus"}
+		{include file="ftnav.html"}
 		{include file="footer.html"}
 		
 	</body>
