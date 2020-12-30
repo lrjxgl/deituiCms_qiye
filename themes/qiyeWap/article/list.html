@@ -12,7 +12,7 @@
 			<div class="tabs-border">
 					
 					{foreach item=c from=$children}	
-					<a href="/index.php?m=article&a=list&catid={$c.catid}" class="tabs-border-item">{$c.cname}</a>
+					<a href="/index.php?m=article&a=list&catid={$c.catid}" class="tabs-border-item {if get('catid') eq $c.catid}tabs-border-active{/if}">{$c.cname}</a>
 					{/foreach}
 				</div>
 			{/if}

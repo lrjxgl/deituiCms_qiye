@@ -10,7 +10,7 @@
 		<div class="header-row"></div>
 		<div class="main-body">
 			<div class="list">
-			{foreach item=c from=$data}
+			{foreach item=c from=$list}
 			<div class="row-box mgb-5">
 				
 				
@@ -30,6 +30,7 @@
 			{foreachelse}
 				<div class="emptyData">暂无留言</div>
 			{/foreach}
+			{$pagelist}
 		</div>
 		{include file="footer.html"}
 	</body>

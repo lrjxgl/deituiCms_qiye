@@ -1,7 +1,7 @@
 <div class="page-side">
 
 	<div class="row-box mgb-10">
-		<div class="row-box-hd"><?php if ($this->_var['parent']): ?><?php echo $this->_var['parent']['cname']; ?><?php else: ?>资讯中心<?php endif; ?></div>
+		<div class="row-box-hd">文章分类</div>
 
 		<div class="list">
 			<?php $_from = $this->_var['catlist']; if (!is_array($_from) && !is_object($_from)) { $_from=array();}; $this->push_vars('', 'c');if (count($_from)):
@@ -19,12 +19,12 @@
 		
 
 	</div>
-	<?php $this->assign("list",M("article")->recList("".$this->_var["cat"]["catid"]."",12)); ?>
-	<?php if ($this->_var['list']): ?>
+	<?php $this->assign("reclist",M("article")->recList("".$this->_var["cat"]["catid"]."",12)); ?>
+	<?php if ($this->_var['reclist']): ?>
 	<div class="row-box">
 		<div class="row-box-hd">热门资讯</div>
 		<div class="list">
-			<?php $_from = $this->_var['list']; if (!is_array($_from) && !is_object($_from)) { $_from=array();}; $this->push_vars('', 'c');if (count($_from)):
+			<?php $_from = $this->_var['reclist']; if (!is_array($_from) && !is_object($_from)) { $_from=array();}; $this->push_vars('', 'c');if (count($_from)):
     foreach ($_from AS $this->_var['c']):
 ?>
 			<a href="/index.php?m=article&a=show&id=<?php echo $this->_var['c']['id']; ?>" class="row-item <?php if ($this->_var['c']['id'] == get ( 'id' )): ?>active<?php endif; ?>">

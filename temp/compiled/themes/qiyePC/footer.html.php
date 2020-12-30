@@ -5,9 +5,13 @@
 		<div class="flex mgb-10">
 			<div class="flex-1">
 				<div class="mgb-10">
-					<a class="cl2 mgr-10" href="http://www.fd175.com">福鼎生活网</a>
-					<a class="cl2 mgr-10" href="http://www.baichaba.com">福鼎白茶网</a>
-					<a class="cl2 mgr-10" href="http://www.koufukeji.com">口福网</a>
+					<span class="mgr-10 cl2">友情链接:</span>
+					<?php $this->assign("links",M("ad")->listbyno("pc-friendlink")); ?>
+					<?php $_from = $this->_var['links']; if (!is_array($_from) && !is_object($_from)) { $_from=array();}; $this->push_vars('', 'c');if (count($_from)):
+    foreach ($_from AS $this->_var['c']):
+?>
+					<a class="cl2 mgr-10" href="<?php echo $this->_var['c']['link1']; ?>"><?php echo $this->_var['c']['title']; ?></a>
+					<?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
 
 				</div>
 				<div class="mgb-10">

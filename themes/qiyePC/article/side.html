@@ -1,7 +1,7 @@
 <div class="page-side">
 
 	<div class="row-box mgb-10">
-		<div class="row-box-hd">{if $parent}{$parent.cname}{else}资讯中心{/if}</div>
+		<div class="row-box-hd">文章分类</div>
 
 		<div class="list">
 			{foreach item=c from=$catlist}
@@ -15,12 +15,12 @@
 		
 
 	</div>
-	{get data=list model=article fun=recList("$cat.catid",12)}
-	{if $list}
+	{get data=reclist model=article fun=recList("$cat.catid",12)}
+	{if $reclist}
 	<div class="row-box">
 		<div class="row-box-hd">热门资讯</div>
 		<div class="list">
-			{foreach item=c from=$list}
+			{foreach item=c from=$reclist}
 			<a href="/index.php?m=article&a=show&id={$c.id}" class="row-item {if $c.id eq get('id')}active{/if}">
 				<div class="row-item-title">{$c.title}</div>
 				 

@@ -9,7 +9,10 @@
 				<div class="flex-1">
 					<div class="flex mgb-10 flex-ai-center">
 						<div>当前位置：</div>
-						<div>首页</div>
+						<a href="/">首页</a>
+						<div>&gt;</div>
+						
+						<a href="/index.php?m=article&a=list&catid=<?php echo $this->_var['cat']['catid']; ?>"><?php echo $this->_var['cat']['cname']; ?></a>
 						<div>&gt;</div>
 						<div> <?php echo $this->_var['data']['title']; ?></div>
 					</div>

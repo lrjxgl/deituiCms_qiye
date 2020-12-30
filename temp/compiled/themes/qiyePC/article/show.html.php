@@ -11,9 +11,15 @@
 						<div>当前位置：</div>
 						<a href="/">首页</a>
 						<div>&gt;</div>
-						<div> <?php echo $this->_var['data']['title']; ?></div>
+						<a href="/index.php?m=article&a=list&catid=<?php echo $this->_var['cat']['catid']; ?>"><?php echo $this->_var['cat']['cname']; ?></a>
+						<div>&gt;</div>
+						<div> 详情</div>
 					</div>
 					<div class="row-box">
+						<div class="d-title"><?php echo $this->_var['data']['title']; ?></div>
+						<div class="d-tools">
+							<div class="cl2 f12">发表于 <?php echo $this->_var['data']['timeago']; ?></div>
+						</div>
 						<div class="d-content"><?php echo $this->_var['data']['content']; ?></div>
 					</div>  
 				</div>

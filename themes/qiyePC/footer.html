@@ -5,9 +5,11 @@
 		<div class="flex mgb-10">
 			<div class="flex-1">
 				<div class="mgb-10">
-					<a class="cl2 mgr-10" href="http://www.fd175.com">福鼎生活网</a>
-					<a class="cl2 mgr-10" href="http://www.baichaba.com">福鼎白茶网</a>
-					<a class="cl2 mgr-10" href="http://www.koufukeji.com">口福网</a>
+					<span class="mgr-10 cl2">友情链接:</span>
+					{get data=links model=ad fun=listbyno("pc-friendlink")}
+					{foreach item=c from=$links}
+					<a class="cl2 mgr-10" href="{$c.link1}">{$c.title}</a>
+					{/foreach}
 
 				</div>
 				<div class="mgb-10">
