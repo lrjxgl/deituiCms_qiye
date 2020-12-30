@@ -1,0 +1,27 @@
+﻿
+得推企业网站系统是基于deituiCMS开发的一款企业官网开发系统，支持PC\wap\公众号\小程序。
+ 
+
+主要功能：
+	导航管理
+	分类管理
+	文章管理
+	留言管理
+	文具管理
+	虚拟表管理
+	
+V3.1更新说明
+	1.skymvc框架升级到V6.0	 
+	2.增加统一文件管理
+	3.增加虚拟表
+	4.增加小程序支持
+		
+	 
+安装说明：
+1.删除config/install.lock 输入程序所在网址即可自动安装
+2.php需要开启https支持
+3.安装完成 删除install.lock
+
+官网：http://www.deituicms.com/ 
+开源协议：https://www.deituicms.com/index.php?m=article&a=show&id=25 
+ 

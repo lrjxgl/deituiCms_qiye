@@ -1,1 +1,1 @@
-{"expire":1609289251,"data":[{"catid":7,"cname":"\u624b\u673a","logo":"http:\/\/qiye.com\/\/static\/images\/category_logo.jpg","last_post":null,"child":[]},{"catid":8,"cname":"\u7535\u8111","logo":"http:\/\/qiye.com\/\/static\/images\/category_logo.jpg","last_post":null,"child":[]}]}
+{"expire":1609321101,"data":[{"catid":7,"cname":"\u624b\u673a","logo":"http:\/\/qiye.com\/\/static\/images\/category_logo.jpg","last_post":null,"child":[]},{"catid":8,"cname":"\u7535\u8111","logo":"http:\/\/qiye.com\/\/static\/images\/category_logo.jpg","last_post":null,"child":[]}]}
